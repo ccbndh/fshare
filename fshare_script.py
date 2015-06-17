@@ -1,4 +1,3 @@
-from urlparse import urljoin
 from bs4 import BeautifulSoup
 import requests
 
@@ -22,17 +21,15 @@ data = {
     'fs_csrf': csrf
 }
 
-headers = { 'user-agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.10 Safari/537.36',
-                    'referer': url }
-
+headers = {
+'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.10 Safari/537.36',
+'referer': url}
 
 response = session.post(url, data=data, headers=headers)
 response = session.get('https://www.fshare.vn/file/FFNQHWVDW6VN/', allow_redirects=False, timeout=(0.1, 10.0))
 
-
 if response.headers['location']:
-	print response.headers['location']
+    print(response.headers['location'])
 else:
-	print '403'
-# print soup
+    print('403')
 
