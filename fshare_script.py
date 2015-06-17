@@ -26,10 +26,10 @@ headers = {
 'referer': url}
 
 response = session.post(url, data=data, headers=headers)
-response = session.get('https://www.fshare.vn/file/FFNQHWVDW6VN/', allow_redirects=False, timeout=(0.1, 10.0))
+response = session.get('https://www.fshare.vn/file/FFNQHWVDW6VN/', allow_redirects=False, timeout=(1.0, 10.0))
 
-if response.headers['location']:
+try:
     print(response.headers['location'])
-else:
-    print('403')
+except:
+    print("Can't get link")
 
