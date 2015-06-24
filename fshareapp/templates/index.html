@@ -5,6 +5,15 @@
     <title></title>
 </head>
 <body>
-Hello
+
+<form action="" method="post">{% csrf_token %}
+    Fshare link<br>
+    <input type="text" name="url" value="">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+{{ res }}
+
 </body>
 </html>
