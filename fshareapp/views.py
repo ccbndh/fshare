@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 
 url = 'https://www.fshare.vn/login/'
-username = 'share@linksvip.net'
-password = '18065226f'
+username = 'cakelovecandy9493@gmail.com'
+password = 'hayvedaybenanh123'
 
 
 def index(request):
